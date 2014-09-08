@@ -44,11 +44,8 @@ var PolyLituusOvals = exports.PolyLituusOvals = Component.specialize(/** @lends 
              }
 
              return shapes;
-         },
-            
-        }
+         }
     }
-    
 });
 
 

@@ -9,18 +9,44 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "ellipse1": {
+            "prototype": "ui/ellipse.reel",
+            "properties": {
+                "element": {"#": "ellipse1"}
+            },
+            "bindings": {
+                "cx": {"<-": "@repetition1:iteration.object.cx"}
+            }
+        },
+        "repetition1": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition1"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.shapes"}
+            }
+        },
+        "svg1": {
+            "prototype": "ui/svg.reel",
+            "properties": {
+                "element": {"#": "svg1"}
+            },
+            "bindings": {
+                "height": {"<-": "@owner.height"},
+                "width": {"<-": "@owner.width"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="PolyLituusOvals">
-           <svg data-montage-id="owner" width="1" height="1" class="PolyLituusOvals"> 
-               <template repeat="{{shape in shapes}}">
-                   <ellipse cx="{{shape.cx}}" cy="{{shape.cy}}" 
-                            rx="{{shape.rx}}" ry="{{shape.ry}}" 
-                            style="fill:{{shape.fill}}"/>
-               </template>
+        <svg width="1" height="1" class="PolyLituusOvals" data-montage-id="svg1">
+            <g data-montage-id="repetition1">
+                <ellipse data-montage-id="ellipse1"></ellipse>
+            </g>
         </svg>
     </div>
 </body>
