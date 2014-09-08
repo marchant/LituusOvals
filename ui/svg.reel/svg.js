@@ -8,10 +8,15 @@ var Component = require("montage/ui/component").Component;
  * @class Svg
  * @extends Component
  */
-exports.Svg = Component.specialize(/** @lends Svg# */ {
+var Svg = exports.Svg = Component.specialize(/** @lends Svg# */ {
     constructor: {
         value: function Svg() {
             this.super();
         }
     }
+
+});
+Svg.addAttributes({
+    width: {dataType: 'number', value: '100'},
+    height: {dataType: 'number', value: '100'}
 });
