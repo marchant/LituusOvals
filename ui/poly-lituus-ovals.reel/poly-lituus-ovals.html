@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="poly-lituus-ovals.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="PolyLituusOvals">
+           <svg data-montage-id="owner" width="1" height="1" class="PolyLituusOvals"> 
+               <template repeat="{{shape in shapes}}">
+                   <ellipse cx="{{shape.cx}}" cy="{{shape.cy}}" 
+                            rx="{{shape.rx}}" ry="{{shape.ry}}" 
+                            style="fill:{{shape.fill}}"/>
+               </template>
+        </svg>
+    </div>
+</body>
+</html>
